@@ -1,4 +1,3 @@
 # website
-My public website
+My Public website
 
-Making some sample chnges to test
