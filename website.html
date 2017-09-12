@@ -1,24 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="">
 
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/website.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 
  <body>
- 
-<div id="mainheader">
-	<h1> First Page test to Be different </h1>
-</div>
-
- <div class="topmenu">
- 
-  <a href="website.html">Home</a>
-  <a href="index2.html">Calculator Design</a>
-  <a href="weatherapp.html">Weather App</a>
-  <a href="#contact">S</a>
-</div>
-
+ <div ng-include src="'headerfooter.html'"></div>
 
 
 <article>
@@ -33,7 +22,7 @@
 	<img src="Images/UniverseOne.jpg" alt="Universe"; >
 </article>
 
-<footer>Copyright &copy; tylerofria.com</footer>
+
  </body>
 
 </html>
