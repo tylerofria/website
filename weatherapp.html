@@ -1,22 +1,80 @@
-<!DOCTYPE html>
-<html ng-app="">
 
+<!DOCTYPE html>
+<html ng-app="myAngularAPP">
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/website.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="js/sample.js"></script>
+
 </head>
 
-<body>
-  <div ng-include src="'headerfooter.html'"></div>
 
- 
+<body>
+
+<div ng-include src="'headerfooter.html'"></div>
+
+
+<div ng-controller="myController" >
+
 
 
 <article>
- <p>some text</p>
-  </article>
+
+
+<input type="text" ng-model="username">
+<button ng-click="weatherget()">Click for Weather</button>
+
+<br></br><p>
+{{username}} weather is  : {{ weather.main.temp}} degrees 
+</p>
+
+
+
+
+
+
+
+</article>
+
+</div>
+</body>
+</html>
+
 
 
  </body>
 
+</body>
+
 </html>
+<!--ng-app: to set up the app in the div element
+
+ng-model: set the variable name
+ng-bind: binds the innterhtml of the <p> element
+ng-init: initializes variabel
+
+<h2>Cost Calculator</h2>
+Quantity: <input type="number" ng-model="quantity">
+Price: <input type="number" ng-model="price">
+
+<p><b>Total in dollar:</b> {{quantity * price}}</p>
+
+            <div ng-repeat="x in jsoner.acls">
+             
+             <b>Rule #: </b>{{x.id}}
+             <br>
+             <b>Extentions:</b>  {{mySplit(x.urls,2)}}
+             </br>
+             
+             <b>Cache time: </b>
+
+              <div ng-repeat="y in jsoner.features">
+                <div ng-if="y.acl_ctl == x.sub_id"> 
+                  {{y.value}}  
+                  
+                </div>
+
+              </div>
+
+  -->
+  

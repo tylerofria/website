@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myAngularArea">
+
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/website.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="js/area.js"></script>
+</head>
+
+<body>
+  <div ng-include src="'headerfooter.html'"></div>
+
+ 
+<div ng-controller="myController" >
+
+<article>
+  <h2><i> Area </i></h2>
+  <h4> Rectangle </h4>
+Length <input type="text" ng-change="area(rectlength, rectwidth, rectscale)" ng-model="rectlength"><br>
+Width <input type="text" ng-change="area(rectlength, rectwidth, rectscale)"  ng-model="rectwidth">
+ <br>
+ Scale ({{rectscale}} %) 0% <input type="range" value="100"  ng-change="area(rectlength, rectwidth, rectscale)" ng-model="rectscale" min="0" max="100">100%
+
+<p>{{rectlength}}</p>
+
+ <canvas id="myCanvas" width="300" height="300"
+style="border:1px solid #000000;">
+</canvas>
+
+</div>
+  </article>
+
+
+ </body>
+
+</html>
